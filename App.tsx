@@ -27,22 +27,26 @@ import {
 
 
 function App(): React.JSX.Element {
- 
+
 
   return (
-    <SafeAreaView style={{flex:1,backgroundColor:"red",justifyContent:"center",alignItems:"center"}}>
-      <Text>hello mydarling
+    /* İlk textte bir özellik ve style verme anlatıldı
+    ikinci texte text içinde metod kullanma anlatıldı */
+    <SafeAreaView style={{ flex: 1, backgroundColor: "red", justifyContent: "center", alignItems: "center" }}>
+      <Text numberOfLines={2} style={{ color: "white", fontWeight: "bold" }}>
+        lorem ipsun dolar set amet lorem ipsun dolar set amet lorem ipsun dolar set amet lorem ipsun dolar set amet lorem ipsun dolar set amet
       </Text>
+      <Text onPress={() => console.log("event gerçekleşti...")}>hello mydarling</Text>
     </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
   background: {
-    flex:1,
-    backgroundColor:"red",
+    flex: 1,
+    backgroundColor: "red",
   },
- 
+
 });
 
 export default App;
