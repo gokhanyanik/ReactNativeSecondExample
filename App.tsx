@@ -15,6 +15,7 @@ import {
   Alert,
   ScrollView,
   FlatList
+  RefreshControl
 
 } from 'react-native';
 const data = [
@@ -81,6 +82,13 @@ const data = [
 ]
 function App(): React.JSX.Element {
   const [text, setText] = useState("")
+  const [refreshing,setRefreshing]=useState(false)
+  const _onRefresh=()=>{
+    setRefreshing(true)
+    setTimeout(()=>{
+      setRefreshing(false)
+    },2000);
+  }
   return (
     <SafeAreaView style={styles.bacground}>
       <TextInput
@@ -105,6 +113,7 @@ function App(): React.JSX.Element {
         data={data}
         renderItem={({ item }) => <Text style={{ fontSize: 30, fontWeight: "bold", borderWidth: 1, borderColor: "yellow", marginVertical: 10 }}>{item.body}</Text>}
         keyExtractor={item => item.id}
+        refreshControl={<RefreshControl refreshing={refreshing} onRefresh={_onRefresh}/>}
       />
       <ScrollView>
         <Text style={{ fontSize: 30 }}>
