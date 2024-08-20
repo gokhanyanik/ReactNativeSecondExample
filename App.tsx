@@ -79,17 +79,27 @@ function App(): React.JSX.Element {
   
   return (
     <SafeAreaView style={styles.bacground}>
-      
+      <Text style={[styles.text,styles.title]}>Bugün günlerden Fenerbahçe!</Text>
+      <Text style={styles.text}>Bugün günlerden Fenerbahçe</Text>
+      <Text style={styles.text}>Bugün günlerden Fenerbahç</Text>
     </SafeAreaView>
   );
 }
 const styles = StyleSheet.create({
   bacground: {
-    backgroundColor: "lightgray",
+    backgroundColor: "red",
     flex: 1,
     justifyContent: "center",
     alignItems: "center"
 
+  },
+  text:{
+    color:"black",
+    fontSize:22
+  },
+  title:{
+    color:"white",
+    fontWeight:"bold"
   }
 
 });
