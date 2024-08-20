@@ -10,7 +10,9 @@ import {
   SafeAreaView,
   StyleSheet,
   Text,
- 
+  Platform,
+  Dimensions
+
 
 } from 'react-native';
 const data = [
@@ -76,30 +78,30 @@ const data = [
   },
 ]
 function App(): React.JSX.Element {
-  
+  console.log(Platform.OS, Dimensions.get("screen"))
   return (
     <SafeAreaView style={styles.bacground}>
-      <Text style={[styles.text,styles.title]}>Bugün günlerden Fenerbahçe!</Text>
-      <Text style={styles.text}>Bugün günlerden Fenerbahçe</Text>
-      <Text style={styles.text}>Bugün günlerden Fenerbahç</Text>
+      <Text style={[styles.text, styles.title]}>This is an {Platform.OS} App</Text>
+      <Text>Height:{Dimensions.get("screen").height}</Text>
+      <Text>Width:{Dimensions.get("screen").width}</Text>
     </SafeAreaView>
   );
 }
 const styles = StyleSheet.create({
   bacground: {
-    backgroundColor: "red",
+    backgroundColor: Platform.OS == "ios" ? "yellow" : "green",
     flex: 1,
     justifyContent: "center",
     alignItems: "center"
 
   },
-  text:{
-    color:"black",
-    fontSize:22
+  text: {
+    color: "black",
+    fontSize: 22
   },
-  title:{
-    color:"white",
-    fontWeight:"bold"
+  title: {
+    color: "white",
+    fontWeight: "bold"
   }
 
 });
