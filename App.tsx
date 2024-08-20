@@ -5,61 +5,39 @@
  * @format
  */
 
-import React from 'react';
+import React, { useState } from 'react';
 import {
   SafeAreaView,
-  ScrollView,
-  StatusBar,
   StyleSheet,
   Text,
-  useColorScheme,
-  View,
-  Image,
-  TouchableOpacity,
+  TextInput,
+
 } from 'react-native';
 
-import {
-  Colors,
-  DebugInstructions,
-  Header,
-  LearnMoreLinks,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
-
-
-
 function App(): React.JSX.Element {
-
-
+  const [text, setText] = useState("")
   return (
-    /* İlk textte bir özellik ve style verme anlatıldı
-    ikinci texte text içinde metod kullanma anlatıldı */
-    <SafeAreaView style={{ flex: 1, backgroundColor: "red" }}>
-      <Text numberOfLines={2} style={{ color: "white", fontWeight: "bold" }}>
-        lorem ipsun dolar set amet lorem ipsun dolar set amet lorem ipsun dolar set amet lorem ipsun dolar set amet lorem ipsun dolar set amet
-      </Text>
-      <TouchableOpacity onPress={() => console.log("on pressed")}>
-
-        <Image
-          source={{
-            uri: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyRceKo4bqjJuw_Rp2dHHqwlyuL0IgDTah8nz55ys7_K1CzLacEtmjBq-VoU6c35y21pM&usqp=CAU",
-            width: 300,
-            height: 300
-          }}
-          resizeMode='contain'   //..... internet üzerinden yüklenen resimlerde boyutlandırma yapılır.
-        //blurRadius={10}
-        //Eğer localde bir resim yüklenicekse uri:"" yerine require("./hangi dizinde ise") kullanılır.
-        />
-      </TouchableOpacity>
+    <SafeAreaView style={styles.bacground}>
+      <TextInput
+        style={{ width: 200, height: 50, borderWidth: 1, padding: 7 }}
+        placeholder='What is your name' // imput içerisinde almak istediğimiz bilgi yazılır
+        value={text} //burada girilen değer imput içinde değiştirilemez bilgi olur yani imputa birşey yazamazsınız.
+        onChangeText={setText} // value değerini eğer değiştirmez isek birşey yazamayız ancak onchange ile settext değerini atayarak değişim yapılabilir. 
+      //secureTextEntry={true}  // eğer imput içerisindeki bilgi bir pasword ise bu ozellik kullanılır ve girilen değeri gizler.
+      //keyboardType='numeric'  // bu özellik kullanıcıya kolaylık sağlamak adına hangi tipte bilgi almak istersek onun tipinde klavye yada @ işareti gibi kullanıcı karşısına çıkarır.
+      />
+      <Text>Text: {text}</Text>
     </SafeAreaView>
   );
 }
-
 const styles = StyleSheet.create({
-  background: {
+  bacground: {
+    backgroundColor: "lightgray",
     flex: 1,
-    backgroundColor: "red",
-  },
+    justifyContent: "center",
+    alignItems: "center"
+
+  }
 
 });
 
