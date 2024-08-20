@@ -13,6 +13,7 @@ import {
   TextInput,
   Button,
   Alert,
+  ScrollView,
 
 } from 'react-native';
 
@@ -39,6 +40,36 @@ function App(): React.JSX.Element {
           ]
         )}
       />
+      <ScrollView>
+        <Text style={{ fontSize: 30 }}>
+          "Tepelerde çınlayan boruları duyduk,
+          Güney krallığında parlıyordu kılıçlar.
+          Küheylanlar sabah rüzgarı gibi
+          Daldı Stoningland' a. Cenk oldu.
+          Orada düştü Başkomutan Theoden,
+          kudretli Thengeloğlu, dönmedi bir daha
+          altın saraylarına ve Kuzey kırlarındaki
+          yeşil otlaklara. Harding ve Guthlaf,
+          Dunhere ve Deorwine, yiğit Grimbold
+          Herefara ve Herubrand, Horn ve Fastred
+          dövüşüp düştüler orada, o üzek ülkede:
+          Mundburg Höyükleri altında, küfler içinde
+          yatıyorlar şimdi yoldaşları Gondor beyleriyle.
+          Ne zarif Hirluin dönebildi deniz kıyısındaki tepelere,
+          ne de yaşlı Forlong döndü zaferle Arnach'a,
+          ülkesinin çiçekli vadilerine; Derufin ve Deuilin,
+          uzun boylu okçular, dönemediler kara sulara,
+          dağların gölgesindeki Morthond gölgelerine.
+          Beyler ve erler kabul ettiler sabah vakti
+          ve gün sonunda ölümü. Uzun zamandır uyurlar şimdi
+          Ulu Nehir kıyısında, Gondor'un çimenleri altında.
+          Şimdi gözyaşları gibi, parlayan gümüş gibi akan su,
+          O gün kıpkızıl gürlüyordu:
+          Günbatımıyla alevlenmişti kana boyalı köpükler;
+          İşaret kuleleri gibi yanıyordu dağlar akşam vakti;
+          Rammas Echor' a al al düşüyordu çiğ.
+        </Text>
+      </ScrollView>
     </SafeAreaView>
   );
 }
