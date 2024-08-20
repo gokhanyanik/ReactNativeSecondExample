@@ -11,6 +11,7 @@ import {
   StyleSheet,
   Text,
   TextInput,
+  Button,
 
 } from 'react-native';
 
@@ -27,6 +28,10 @@ function App(): React.JSX.Element {
       //keyboardType='numeric'  // bu özellik kullanıcıya kolaylık sağlamak adına hangi tipte bilgi almak istersek onun tipinde klavye yada @ işareti gibi kullanıcı karşısına çıkarır.
       />
       <Text>Text: {text}</Text>
+      <Button
+      title='Press me!!'  // butonun üzerindeki başlık.
+      onPress={()=>console.log("butona basıldı")} // butona basıldığında hangi eventin gerçekleşmesini istiyorsak onPressde tanımlıyoruz.
+      />
     </SafeAreaView>
   );
 }
