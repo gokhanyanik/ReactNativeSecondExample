@@ -12,6 +12,7 @@ import {
   Text,
   TextInput,
   Button,
+  Alert,
 
 } from 'react-native';
 
@@ -29,8 +30,14 @@ function App(): React.JSX.Element {
       />
       <Text>Text: {text}</Text>
       <Button
-      title='Press me!!'  // butonun üzerindeki başlık.
-      onPress={()=>console.log("butona basıldı")} // butona basıldığında hangi eventin gerçekleşmesini istiyorsak onPressde tanımlıyoruz.
+        title='Press me!!'  // butonun üzerindeki başlık.
+        onPress={() => Alert.alert("Hello " + text, "Günün nasıl geçiyor",
+          [
+            { text: "İYİ", onPress: () => console.log("iyi olmana sevindim") },// buradaki onPres kullanmamızın amacı hangisini tercih ettiğimizin kontolünü yapmak.
+            { text: "KÖTÜ", onPress: () => console.log("Sorun nedir?") }
+
+          ]
+        )}
       />
     </SafeAreaView>
   );
