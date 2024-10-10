@@ -15,7 +15,8 @@ import { Foo } from './Foo';
 
 function App(): React.JSX.Element {
   return (
-    <Provider store={Store}>
+    //provider' lar sarmalı içine aldığı tüm komponentlere global state'e erişim olanağı sağlar.Bir adet props alır ve değerine kendi store'umuzun ismini veririz.
+    <Provider store={Store}>   
 
       <View style={styles.container}>
         <Foo />

@@ -6,9 +6,9 @@ const Slice = createSlice({
     initialState: {
         count: 0                          //burada state' in başlangıç değeri tutulur.
     },
-    reducers: {
+    reducers: {  // reducer' lar state üzerinde değişiklik yapacak olan işlevleri(fonksiyonlar) barındırır.
         increas(state) {
-            state.count++;
+            state.count++;     // Bu fonksiyonlara action denir ve global verimizi bu fonksiyonlar ile değiştiririz.
         },
         decreas(state) {
             state.count--;

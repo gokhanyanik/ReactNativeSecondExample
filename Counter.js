@@ -5,8 +5,8 @@ import { decreas, increas, refresh } from "./Slice";
 
 
 export const Counter = () => {
-    const counter = useSelector((state) => state.counter);
-    const dispatch = useDispatch()
+    const counter = useSelector((state) => state.counter); // State'in mevcut değerini elde ederiz.
+    const dispatch = useDispatch()   //State'in üzerindeki değişiklikleri yapacak olan actionları(fonksiyonları) kullanmamızı sağlar.
     return (
         <View style={{ backgroundColor: "#aeaeae", borderRadius: 30, width: 300, height: 300, justifyContent: "center", alignItems: "center" }}>
             <Text style={{ fontWeight: "bold", fontSize: 30 }}>{counter.count}</Text>
