@@ -1,10 +1,5 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- */
-import React, { useEffect, useState } from 'react';
+
+import React from 'react';
 import {
   SafeAreaView,
   StyleSheet,
@@ -21,11 +16,11 @@ import { Foo } from './Foo';
 function App(): React.JSX.Element {
   return (
     <Provider store={Store}>
-     
-   <View style={styles.container}>
-   <Foo/>
-   <Counter/>
-   </View>
+
+      <View style={styles.container}>
+        <Foo />
+        <Counter />
+      </View>
     </Provider>
   );
 }
@@ -36,6 +31,6 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center"
   },
-  
+
 });
 export default App;
