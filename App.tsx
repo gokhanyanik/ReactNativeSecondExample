@@ -11,6 +11,7 @@ import { Provider } from 'react-redux';
 import { Store } from './Store';
 import { Counter } from './Counter';
 import { Foo } from './Foo';
+import { Bar } from './Bar';
 
 
 function App(): React.JSX.Element {
@@ -19,6 +20,7 @@ function App(): React.JSX.Element {
     <Provider store={Store}>   
 
       <View style={styles.container}>
+        <Bar/>
         <Foo />
         <Counter />
       </View>
